@@ -1,0 +1,42 @@
+config:
+  target: "https://api.todoist.com/rest/v1"
+  phases:
+    - duration: 6
+      arrivalRate: 1
+      name: Performance Test
+  defaults:
+    headers:
+      Authorization: Bearer {{ $processEnvironment.TOKEN }}
+      Content-type: application/json
+scenarios:
+  - name: "Todoist Basic CRUD"
+    flow:
+    #GET tasks
+      - get:
+          url: "/tasks"
+    #POST a brand new task
+      - post:
+          url: "/tasks"
+          body: '{ "content": "Buy Milk", "project_id": 2203306141}'  
+          capture:
+            json: "$.id"
+            as: "id"
+    #Logging the id
+      - log: "Task created with the id: {{ id }}"
+    #Check the tnew task
+      - get:
+          url: "/tasks/{{ id }}"
+    #Update the task!
+      - post:
+          url: "/tasks/{{ id }}"
+          body: '{"content": "Updated Task"}'
+    #Complete 
+      - post:
+          url: "/tasks/{{ id }}/close"
+    #Reopen the task
+      - post:
+          url: "/tasks/{{ id }}/reopen"
+    #Delete the task
+      - delete:
+          url: "/tasks/{{ id }}"
+      - log: "Deleted task with the id: {{ id }}"

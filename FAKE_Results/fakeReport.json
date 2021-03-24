@@ -1,0 +1,99 @@
+{
+  "aggregate": {
+    "timestamp": "2021-03-24T06:39:24.728Z",
+    "scenariosCreated": 6,
+    "scenariosCompleted": 6,
+    "requestsCompleted": 12,
+    "latency": {
+      "min": 452.6,
+      "max": 1018.1,
+      "median": 665.1,
+      "p95": 999.6,
+      "p99": 1018.1
+    },
+    "rps": {
+      "count": 12,
+      "mean": 1.87
+    },
+    "scenarioDuration": {
+      "min": 1246.9,
+      "max": 1570.5,
+      "median": 1344.8,
+      "p95": 1570.5,
+      "p99": 1570.5
+    },
+    "scenarioCounts": {
+      "Using Faker with Artillery": 6
+    },
+    "errors": {},
+    "codes": {
+      "200": 6,
+      "204": 6
+    },
+    "matches": 0,
+    "customStats": {},
+    "counters": {},
+    "scenariosAvoided": 0,
+    "phases": [
+      {
+        "duration": 6,
+        "arrivalRate": 1,
+        "name": "Performance Test"
+      }
+    ]
+  },
+  "intermediate": [
+    {
+      "timestamp": "2021-03-24T06:39:24.715Z",
+      "scenariosCreated": 6,
+      "scenariosCompleted": 6,
+      "requestsCompleted": 12,
+      "latency": {
+        "min": 452.6,
+        "max": 1018.1,
+        "median": 665.1,
+        "p95": 999.6,
+        "p99": 1018.1
+      },
+      "rps": {
+        "count": 12,
+        "mean": 1.87
+      },
+      "scenarioDuration": {
+        "min": 1246.9,
+        "max": 1570.5,
+        "median": 1344.8,
+        "p95": 1570.5,
+        "p99": 1570.5
+      },
+      "scenarioCounts": {
+        "Using Faker with Artillery": 6
+      },
+      "errors": {},
+      "codes": {
+        "200": 6,
+        "204": 6
+      },
+      "matches": 0,
+      "latencies": [
+        832687200,
+        585081800,
+        751519800,
+        522196500,
+        829263200,
+        452551100,
+        1018112500,
+        477807600,
+        744016900,
+        483717200,
+        797497900,
+        586170500
+      ],
+      "customStats": {},
+      "counters": {},
+      "concurrency": 0,
+      "pendingRequests": 0,
+      "scenariosAvoided": 0
+    }
+  ]
+}

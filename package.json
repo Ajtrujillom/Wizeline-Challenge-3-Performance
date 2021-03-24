@@ -1,0 +1,16 @@
+{
+  "name": "wizeline_academy_a3_ajtm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test_crud": "artillery run --output ./CRUD_Results/crudReport.json todoistArtillery.yml && artillery report --output ./CRUD_Results/crudReport.html ./CRUD_Results/crudReport.json",
+    "test_fake": "artillery run --output ./FAKE_Results/fakeReport.json todoistFake.yml && artillery report --output ./FAKE_Results/fakeReport.html ./FAKE_Results/fakeReport.json"
+  },
+  "author": "Andres Trujillo",
+  "license": "ISC",
+  "dependencies": {
+    "artillery": "^1.6.2",
+    "artillery-plugin-faker": "^3.0.0"
+  }
+}
